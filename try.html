@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Emotional Interaction Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="green-bar">
+        <h1 class="main-title">The Emotional Interaction Board</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Introduction</a>
+        <a href="try.html">Try Me!</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section id="feelings" class="content">
+        <h2 class="content-title">Step 1: PICK AN EMOTION CARD</h2>
+        <p Class="content-subtitle">Choose an emotion card that represents your current emotional state.</p>
+
+        <div class="content-container">
+            <div class="card-column">
+                <div id="e1" class="content-box" onclick="handleFeelings(1)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/calm.jpg');">
+                    </div>
+                    <div class="text-box" style="background-color: #b1f3a3;">
+                        CALM
+                    </div>
+                </div>
+                <div id="e2" class="content-box" onclick="handleFeelings(2)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/sadness.jpg');">
+                    </div>
+                    <div class="text-box" style="background-color: #ebe374;">
+                        SAD
+                    </div>
+                </div>
+            </div>
+            <dv class="card-column">
+                <div id="e3" class="content-box" onclick="handleFeelings(3)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/anxiety.jpg');">
+                    </div>
+                    <div class="text-box" style="background-color: #f3b6a3;">
+                        ANXIOUS
+                    </div>
+                </div>
+                <div id="e4" class="content-box" onclick="handleFeelings(4)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/hopeful.jpg');">
+                    </div>
+                    <div class="text-box" style="background-color: #a3d3f3;">
+                        HOPEFUL
+                    </div>
+                </div>
+            </dv>
+        </div>
+        <div class="button-container">
+            <button id="next-btn" class="next-btn disabled" onclick="handleNext()">NEXT</button>
+        </div>
+    </section>
+
+    <section id="places" class="content" style="display: none;">
+        <h2 class="content-title">Step 1: PICK A SCENARIO CARD</h2>
+        <p Class="content-subtitle">Choose a scenario card that represents your current emotional state.</p>
+
+        <div class="content-container">
+            <div class="card-column">
+                <div id="p1" class="content-box" onclick="handlePlaces(1)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/beach.png');">
+                    </div>
+                    <div class="text-box" style="background-color: #b1f3a3;">
+                        Sunset by the Sea
+                    </div>
+                </div>
+                <div id="p2" class="content-box" onclick="handlePlaces(2)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/city.png');">
+                    </div>
+                    <div class="text-box" style="background-color: #ebe374;">
+                        Busy City Streets
+                    </div>
+                </div>
+            </div>
+            <dv class="card-column">
+                <div id="p3" class="content-box" onclick="handlePlaces(3)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/forest.png');">
+                    </div>
+                    <div class="text-box" style="background-color: #f3b6a3;">
+                        Rainy Forest
+                    </div>
+                </div>
+                <div id="p4" class="content-box" onclick="handlePlaces(4)">
+                    <div class="img-box" style="background-image: url('./public/assets/images/valley.png');">
+                    </div>
+                    <div class="text-box" style="background-color: #a3d3f3;">
+                        Quiet Valley
+                    </div>
+                </div>
+            </dv>
+        </div>
+        <div class="button-container">
+            <button id="last-button" class="next-btn disabled" onclick="handleFinal()">NEXT</button>
+        </div>
+    </section>
+
+</body>
+</html>
