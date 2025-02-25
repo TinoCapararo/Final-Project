@@ -72,12 +72,22 @@ function handleNext() {
     }
 }
 
+const emotionsDict = {
+    1: 'calm',
+    2: 'sadness',
+    3: 'anxiety',
+    4: 'hope',
+}
+const placesDict = {
+    1: 'seaside',
+    2: 'city',
+    3: 'rainforest',
+    4: 'valley',
+}
 function handleFinal() {
-    let result = emotion * place;
-    if (result == 0) {
+    if (emotion == 0 || place == 0) {
         alert('Please select your emotion and place first');
     } else {
-        console.log(result);
-        window.location.href = "result" + result + ".html";
+        window.location.href = emotionsDict[emotion] + "_" + placesDict[place] + ".html";
     }
 }
