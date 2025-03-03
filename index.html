@@ -1,6 +1,4 @@
-<!-- This is the HTML document structure declaration -->
 <!DOCTYPE html>
-<!-- Opens the HTML document with language set to English -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +6,86 @@
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        
+        .green-bar {
+            background-color: #4CAF50; /* Green bar background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-title {
+            color: white;
+            font-size: 36px;
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            background: linear-gradient(135deg, #a3c2c2, #d1e8e2); /* Soft teal gradient */
+            color: #333; /* Text color */
+        }
+
+        .content-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2a2a2a; /* Darker title color */
+        }
+
+        .content-subtitle {
+            font-size: 18px;
+            color: #555; /* Lighter subtitle color */
+            margin-top: 10px;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #444; /* Text color for paragraphs */
+            line-height: 1.6;
+        }
+
+        a {
+            color: #4CAF50; /* Link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #2a9d8f; /* Calming teal for hover */
+        }
+    </style>
 </head>
 <body>
     <header class="green-bar">
@@ -21,10 +99,13 @@
     </nav>
 
     <div class="content">
+        <h2 class="content-title">Discover the Connection Between Emotions and Environments</h2>
         <p id="intro">
-            This installation is designed to help users explore the relationship between emotions and environments, providing insights into how different emotional states can be influenced by various scenes.  
+            The Emotional Interaction Board is an immersive experience designed to help users explore the deep relationship between emotions and different environments. 
+            By interacting with the board, you can visualize how your feelings—whether it's calm, anxiety, sadness, or hope—connect with various surroundings.
         </p>
+        <p class="content-subtitle">Select an emotion and watch the board respond, revealing the environment that resonates with your mood.</p>
+        <p id="intro">Are you ready to dive in? Click <a href="try.html">Try Me!</a> to begin your journey.</p>
     </div>
-
 </body>
 </html>
