@@ -71,7 +71,7 @@ nav a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: black;
-    border: 2px solid #4caf4f00;;
+    border: 2px solid #4caf4f00;
     font-weight: bold;
     overflow: hidden;
 }
@@ -135,4 +135,24 @@ nav a:hover {
 .disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.feeling-box {
+    display: inline-block;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Optional: smooth reset after vibration */
+    overflow: visible; /* Ensure it can move freely during vibration */
+}
+
+.feeling-box:active {
+    background-color: #ddd;
+}
+
+.feeling-box:hover {
+    background-color: #f7c42f; /* Optional: hover effect for feedback */
 }
