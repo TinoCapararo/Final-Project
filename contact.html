@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Emotional Interaction Board</title>
+    <title>Contact Us - The Emotional Interaction Board</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Added Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Updated font -->
     <style>
         body {
             font-family: 'Poppins', sans-serif; /* Updated font */
@@ -25,7 +25,7 @@
         .main-title {
             color: white;
             font-size: 36px;
-            font-family: 'Dancing Script', cursive; /* Keep the cursive for the title */
+            font-weight: 600; /* Bold for better readability */
             margin: 0;
         }
 
@@ -40,7 +40,6 @@
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
-            font-family: 'Poppins', sans-serif; /* Updated font */
             font-weight: 600; /* Bold for better readability */
         }
 
@@ -88,46 +87,54 @@
             color: #2a9d8f; /* Calming teal for hover */
         }
 
-        /* New Styles for Enhanced Layout */
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        .section i {
-            font-size: 40px;
-            color: #4CAF50;
-            margin-bottom: 10px;
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
-        .section h3 {
-            font-size: 24px;
-            color: #2a2a2a;
-            margin: 10px 0;
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
         }
 
-        .section p {
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .contact-info {
+            margin-top: 30px;
             font-size: 16px;
             color: #555;
         }
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
+        .contact-info a {
+            color: #4CAF50;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
         }
 
-        .cta-button:hover {
-            background-color: #45a049;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -143,33 +150,28 @@
     </nav>
 
     <div class="content">
-        <!-- Introduction Section -->
-        <div class="section">
-            <i class="fas fa-heart"></i>
-            <h3>Discover the Connection Between Emotions and Environments</h3>
-            <p>
-                The Emotional Interaction Board is an immersive experience designed to help users explore the deep relationship between emotions and different environments. 
-                By interacting with the board, you can visualize how your feelings—whether it's calm, anxiety, sadness, or hope—connect with various surroundings.
-            </p>
-        </div>
+        <h2 class="content-title">Contact Us</h2>
+        <p class="content-subtitle">We'd love to hear from you! Send us a message and we'll get back to you as soon as possible.</p>
 
-        <!-- How It Works Section -->
-        <div class="section">
-            <i class="fas fa-lightbulb"></i>
-            <h3>How It Works</h3>
-            <p>
-                Select an emotion from the board, and watch as it dynamically responds to your choice. The environment will shift to reflect your mood, creating a unique and personalized experience.
-            </p>
-        </div>
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
 
-        <!-- Call to Action Section -->
-        <div class="section">
-            <i class="fas fa-play-circle"></i>
-            <h3>Ready to Dive In?</h3>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p>Alternatively, you can reach us at:</p>
+            <p>Email: <a href="mailto:info@emotionalboard.com">info@emotionalboard.com</a></p>
+            <p>Follow us on social media:</p>
             <p>
-                Click the button below to begin your journey and explore the fascinating connection between emotions and environments.
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Facebook</a>
             </p>
-            <a href="try.html" class="cta-button">Try Me!</a>
         </div>
     </div>
 </body>
