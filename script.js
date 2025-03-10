@@ -1,33 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const feelingBoxes = document.querySelectorAll(".feeling-box");
-
-    feelingBoxes.forEach(box => {
-        box.addEventListener("click", function () {
-            let i = 0;
-            const element = this; // Store reference to clicked element
-
-            // Clear any existing animation before starting a new one
-            clearInterval(element.shakeInterval);
-
-            element.shakeInterval = setInterval(() => {
-                const offsetX = (Math.random() - 0.5) * 10; // Increased shake range
-                const offsetY = (Math.random() - 0.5) * 10;
-                const rotate = (Math.random() - 0.5) * 5; // More noticeable rotation
-
-                element.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg)`;
-
-                i++;
-                if (i > 10) { 
-                    clearInterval(element.shakeInterval);
-                    element.style.transform = "translate(0, 0) rotate(0deg)"; // Reset after shaking
-                }
-            }, 50); // Adjusted timing for smoother effect
-        });
-    });
-});
-
-
-
 let emotion = 0; // ranges from 1-4, 0 if unselected
 let place = 0; // ranges from 1-4, 0 if unselected
 
@@ -108,3 +78,4 @@ function handleFinal() {
         window.location.href = emotionsDict[emotion] + "_" + placesDict[place] + ".html";
     }
 }
+
