@@ -112,6 +112,9 @@ nav a:hover {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    
 }
 
 .next-btn {
@@ -155,4 +158,36 @@ nav a:hover {
 
 .feeling-box:hover {
     background-color: #f7c42f; /* Optional: hover effect for feedback */
+}
+.feedback {
+    text-align: center;
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #f3f3f3;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; 
+    position: relative;
+    margin: 20px auto; /* centre container in the page */
+}
+
+/* Style for image inside the container */
+.img-container .img-box {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;  
+}
+
+/* Adjust size of images */
+.img-container .img-box:first-child {
+    width: 100%; /* Image size (beach.png) */
+    height: 100%;
+    z-index: 1; /* background second image */
 }
