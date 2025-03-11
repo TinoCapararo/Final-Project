@@ -1,58 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+html {
+    font-family: Arial, sans-serif; /* Set the default font for the document */
 }
 
 .green-bar {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #4CAF50; /* Green background for the header */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding for the header */
 }
 
 .main-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em;
-}
-
-nav {
-    background-color: #333;
-    overflow: hidden;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
+    font-family: Arial, sans-serif; /* Font for the main title */
+    font-size: 3em; /* Font size for the main title */
 }
 
 .content {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 900px; /* Maximum width for content */
+    margin: 20px auto; /* Center align content with margin */
+    padding: 20px; /* Padding for content */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect for content */
+    border-radius: 8px; /* Rounded corners for content */
+    text-align: center; /* Center align text in content */
 }
 
 .content-title {
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 28px; /* Font size for content titles */
+    font-weight: bold; /* Bold font for content titles */
+    color: #2a2a2a; /* Darker color for titles */
+}
+
+.content p {
+    font-size: 16px; /* Font size for paragraphs */
+    color: #444; /* Text color for paragraphs */
+    line-height: 1.6; /* Line height for better readability */
 }
 
 .content-subtitle {
     text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -90,9 +78,9 @@ nav a:hover {
 }
 
 .text-box {
-    height: 30px;
+    height: 40px;
     width: 200px;
-    padding: 5px 0px;
+    padding: 5px 5px;
 }
 
 .content-box:hover {
@@ -100,7 +88,7 @@ nav a:hover {
 }
 
 .selected {
-    border: 2px solid #ff6600;
+    border: 2px solid #ff6600; /* Orange border for selected cards */
 }
 
 #intro {
@@ -109,35 +97,34 @@ nav a:hover {
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    
+    display: flex; /* Use flexbox for button container */
+    justify-content: center; /* Center align buttons */
+    margin: 20px; /* Margin for button container */
+    padding: 12px 24px; /* Padding for buttons */
+    border-radius: 8px; /* Rounded corners for buttons */
 }
 
 .next-btn {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 8px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem; /* Font size for next button */
+    font-weight: bold; /* Bold font for next button */
+    padding: 12px 24px; /* Padding for next button */
+    border-radius: 8px; /* Rounded corners for next button */
+    background-color: #007bff; /* Blue background for next button */
+    border: none; /* No border for next button */
+    color: white; /* White text color for next button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Transition effect for hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for next button */
 }
 
 .next-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
 
 .disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    background-color: #ccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
 }
 
 .feeling-box {
@@ -159,35 +146,150 @@ nav a:hover {
 .feeling-box:hover {
     background-color: #f7c42f; /* Optional: hover effect for feedback */
 }
+
 .feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    width: 800px;
+    max-width: 800px;
     padding: 10px;
     border: 1px solid #e6e6e6;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 80px auto 80px auto;
     background-color: #f3f3f3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px; 
-    position: relative;
-    margin: 20px auto; /* centre container in the page */
+    height: 200px; 
+    width: 420px;
+    gap: 20px;
+    margin: auto;
+    margin-bottom: 80px;
 }
 
-/* Style for image inside the container */
-.img-container .img-box {
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid white;  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #b1f3a3, #a3d3f3); /* Gradient using green and blue */
+    background-attachment: fixed;
 }
 
-/* Adjust size of images */
-.img-container .img-box:first-child {
-    width: 100%; /* Image size (beach.png) */
-    height: 100%;
-    z-index: 1; /* background second image */
+a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2a9d8f; /* Calming teal for hover */
+}
+
+/* New Styles for Enhanced Layout */
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section i {
+    font-size: 40px;
+    color: #4CAF50; /* Green color for icons */
+    margin-bottom: 10px;
+}
+
+.section h3 {
+    font-size: 24px;
+    color: #2a2a2a;
+    margin: 10px 0;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* New Styles for How It Works Section */
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.step {
+    flex: 1;
+    min-width: 250px; /* Wider cards */
+    text-align: center;
+}
+
+.step i {
+    font-size: 25px; /* Smaller icon size */
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    font-size: 18px; /* Smaller font size for titles */
+    color: #2a2a2a;
+    margin: 10px 0;
+    white-space: nowrap; /* Ensure titles stay in one line */
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        margin: 20px;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    /* remove margin gap */
+    #feelings {
+        margin: 0px;
+    }
+
+    .img-box {
+        height: 150px;
+        width: 150px;
+    }
+
+    .text-box {
+        height: 25px;
+        width: 150px;
+        font-size: small;
+    }
 }

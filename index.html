@@ -1,223 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Emotional Interaction Board</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #b1f3a3, #a3d3f3); /* Gradient using green and blue */
-            background-attachment: fixed;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Emotional Interaction Board</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <!-- Font Awesome for icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header class="green-bar">
+            <h1 class="main-title">The Emotional Interaction Board</h1>
+        </header>
 
-        .green-bar {
-            background-color: #4CAF50; /* Green bar background */
-            padding: 20px;
-            text-align: center;
-        }
+        <!-- Bootstrap navbar collapsable on small screen -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark" aria-label="Twelfth navbar example">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a href="index.html" class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="try.html" class="nav-link" href="try.html">Try Me</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="contact.html" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
 
-        .main-title {
-            color: white;
-            font-size: 36px;
-            font-family: 'Dancing Script', cursive;
-            margin: 0;
-        }
+        <div class="content">
+            <!-- Introduction Section -->
+            <div class="section">
+                <i class="fas fa-heart"></i> <!-- Heart icon -->
+                <h3>Discover the Connection Between Emotions and Environments</h3>
+                <p>
+                    The Emotional Interaction Board is an immersive experience designed to help users explore the deep relationship between emotions and different environments. 
+                    By interacting with the board, you can visualize how your feelings—whether it's calm, anxiety, sadness, or hope—connect with various surroundings.
+                </p>
+            </div>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
+            <!-- How It Works Section -->
+            <div class="section">
+                <h3>How It Works</h3>
+                <ul class="steps-container">
+                    <li class="step">
+                        <i class="fas fa-hand-pointer"></i> <!-- Hand pointer icon -->
+                        <h4>Step 1: Pick an Emotion</h4>
+                        <p>Choose an emotion card that represents your current emotional state.</p>
+                    </li>
+                    <li class="step">
+                        <i class="fas fa-image"></i> <!-- Image icon -->
+                        <h4>Step 2: Pick a Scenario</h4>
+                        <p>Select a scenario card that resonates with your chosen emotion.</p>
+                    </li>
+                    <li class="step">
+                        <i class="fas fa-eye"></i> <!-- Eye icon -->
+                        <h4>Step 3: Reflect</h4>
+                        <p>Observe how the combination of emotion and scenario makes you feel.</p>
+                    </li>
+                </ul>
+            </div>
 
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .content-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #2a2a2a; /* Darker title color */
-        }
-
-        .content-subtitle {
-            font-size: 18px;
-            color: #555; /* Lighter subtitle color */
-            margin-top: 10px;
-        }
-
-        .content p {
-            font-size: 16px;
-            color: #444; /* Text color for paragraphs */
-            line-height: 1.6;
-        }
-
-        a {
-            color: #4CAF50; /* Link color */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #2a9d8f; /* Calming teal for hover */
-        }
-
-        /* New Styles for Enhanced Layout */
-        .section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .section i {
-            font-size: 40px;
-            color: #4CAF50; /* Green color for icons */
-            margin-bottom: 10px;
-        }
-
-        .section h3 {
-            font-size: 24px;
-            color: #2a2a2a;
-            margin: 10px 0;
-        }
-
-        .section p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #45a049;
-        }
-
-        /* New Styles for How It Works Section */
-        .steps-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-            list-style: none; /* Remove default list styling */
-            padding: 0; /* Remove default padding */
-        }
-
-        .step {
-            flex: 1;
-            min-width: 250px; /* Wider cards */
-            text-align: center;
-        }
-
-        .step i {
-            font-size: 25px; /* Smaller icon size */
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        .step h4 {
-            font-size: 18px; /* Smaller font size for titles */
-            color: #2a2a2a;
-            margin: 10px 0;
-            white-space: nowrap; /* Ensure titles stay in one line */
-        }
-
-        .step p {
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <header class="green-bar">
-        <h1 class="main-title">The Emotional Interaction Board</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">Introduction</a>
-        <a href="try.html">Try Me!</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="content">
-        <!-- Introduction Section -->
-        <div class="section">
-            <i class="fas fa-heart"></i> <!-- Heart icon -->
-            <h3>Discover the Connection Between Emotions and Environments</h3>
-            <p>
-                The Emotional Interaction Board is an immersive experience designed to help users explore the deep relationship between emotions and different environments. 
-                By interacting with the board, you can visualize how your feelings—whether it's calm, anxiety, sadness, or hope—connect with various surroundings.
-            </p>
+            <!-- Call to Action Section -->
+            <div class="section">
+                <i class="fas fa-play-circle"></i> <!-- Play circle icon -->
+                <h3>Ready to Dive In?</h3>
+                <p>
+                    Click the button below to begin your journey and explore the fascinating connection between emotions and environments.
+                </p>
+                <a href="try.html" class="cta-button">Try Me!</a>
+            </div>
         </div>
-
-        <!-- How It Works Section -->
-        <div class="section">
-            <h3>How It Works</h3>
-            <ul class="steps-container">
-                <li class="step">
-                    <i class="fas fa-hand-pointer"></i> <!-- Hand pointer icon -->
-                    <h4>Step 1: Pick an Emotion</h4>
-                    <p>Choose an emotion card that represents your current emotional state.</p>
-                </li>
-                <li class="step">
-                    <i class="fas fa-image"></i> <!-- Image icon -->
-                    <h4>Step 2: Pick a Scenario</h4>
-                    <p>Select a scenario card that resonates with your chosen emotion.</p>
-                </li>
-                <li class="step">
-                    <i class="fas fa-eye"></i> <!-- Eye icon -->
-                    <h4>Step 3: Reflect</h4>
-                    <p>Observe how the combination of emotion and scenario makes you feel.</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Call to Action Section -->
-        <div class="section">
-            <i class="fas fa-play-circle"></i> <!-- Play circle icon -->
-            <h3>Ready to Dive In?</h3>
-            <p>
-                Click the button below to begin your journey and explore the fascinating connection between emotions and environments.
-            </p>
-            <a href="try.html" class="cta-button">Try Me!</a>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
